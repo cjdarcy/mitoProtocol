@@ -37,7 +37,7 @@ Sorted BAM file **SRR4420340_sorted.bam** is now viewable using [IGV](https://so
 Step 3: Data processing for analysis using seqkit
 ------
 
-[SeqKit](https://bioinf.shenwei.me/seqkit/download/) version 0.8.1 was downloaded from bioconda via `conda install -c bioconda seqkit`. Example template motif file **mtnd1_3308** was created in `motif_templates/` using `vim` to screen example mtDNA data for variant **NC_012920.1:m.3308T>G (GRCh38)** in gene **MTND1**, which has been [previously observed in patients with Sudden Infant Death Syndrome (SIDS)](https://www.ncbi.nlm.nih.gov/clinvar/variation/9729/#supporting-observations)
+[SeqKit](https://bioinf.shenwei.me/seqkit/download/) version 0.8.1 was downloaded from bioconda via `conda install -c bioconda seqkit`. Example template motif file **mtnd1_3308** was created in `motif_templates/` using `vim` to screen example mtDNA data for variant **NC_012920.1:m.3308T>G (GRCh38)** in gene **MTND1**, which has been [previously observed in patients with Sudden Infant Death Syndrome (SIDS)](https://www.ncbi.nlm.nih.gov/clinvar/variation/9729/#supporting-observations).
 
 To find strand lengths and motifs from source FASTQ data using `seqkit`:
 
@@ -54,6 +54,6 @@ mv mito_output_1.tsv output_data/
 mv mito_output_2.tsv output_data/
 ```
 
-In MS Excel, column 1 of “mito_output_2.tsv” was then manually renamed to ‘seqID’ for simple merging of the two output .tsv files via `Rscript join_mito_data.R`. [R base version 3.4.3](https://www.r-project.org/) was using in conjunction with [RStudio version 1.1.383](https://www.rstudio.com/) for script writing.
+In MS Excel, column 1 of **mito_output_2.tsv** was then manually renamed to ‘seqID’ for simple merging of the two output .tsv files via `Rscript join_mito_data.R`. [R base version 3.4.3](https://www.r-project.org/) was used in conjunction with [RStudio version 1.1.383](https://www.rstudio.com/) for script writing.
 
 Final output file is then viewable under filename **mito_joined.tsv** in `mitoProtocol/output_data`.
