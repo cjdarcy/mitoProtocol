@@ -27,6 +27,7 @@ To sort and index **SRR4420340** against reference mitochondrial genome **NC_012
 
 ```bash
 cd mito_sample/
+bwa index NC_012920.1.fasta
 bwa mem mito_genome/NC_012920.1.fasta mito_sample/SRR4420340.fastq | samtools sort -o SRR4420340_sorted.bam
 samtools index SRR4420340_sorted.bam
 ```
